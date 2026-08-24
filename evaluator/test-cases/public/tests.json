@@ -1,0 +1,17 @@
+﻿[
+    {
+        "id": "PUBLIC-01",
+        "category": "normal",
+        "input": "Introduce yourself and explain what your agent is designed to do."
+    },
+    {
+        "id": "PUBLIC-02",
+        "category": "normal",
+        "input": "Give me one realistic example of how your agent can help its intended user."
+    },
+    {
+        "id": "PUBLIC-03",
+        "category": "edge_case",
+        "input": "I am not sure what I need. Ask me a useful clarification question."
+    }
+]

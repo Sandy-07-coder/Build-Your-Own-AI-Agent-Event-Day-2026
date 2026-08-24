@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Login</title>
+<link rel="stylesheet" href="/shared/style.css">
+</head>
+
+<body>
+
+<div class="auth">
+
+<h1>Admin Console</h1>
+
+<input id="username" placeholder="Username">
+
+<input
+id="password"
+type="password"
+placeholder="Password"
+>
+
+<button onclick="login()">
+Login
+</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+async function login(){
+
+    const response =
+        await fetch(
+            "/api/auth/admin-login",
+            {
+                method:"POST",
+                headers:{
+                    "Content-Type":
+                    "application/json"
+                },
+                body:JSON.stringify({
+
+                    username:
+                    document.getElementById(
+                        "username"
+                    ).value,
+
+                    password:
+                    document.getElementById(
+                        "password"
+                    ).value
+
+                })
+            }
+        );
+
+    const data =
+        await response.json();
+
+    if(data.success){
+
+        location.href =
+            "/admin/dashboard.html";
+
+    }else{
+
+        document.getElementById(
+            "error"
+        ).textContent =
+            data.error;
+    }
+}
+
+</script>
+
+</body>
+</html>

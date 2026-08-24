@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Leaderboard</title>
+<link rel="stylesheet" href="/shared/style.css">
+</head>
+
+<body>
+
+<nav>
+
+<strong>ADMIN — LEADERBOARD</strong>
+
+<a href="/admin/dashboard.html">
+Dashboard
+</a>
+
+</nav>
+
+<main>
+
+<h1>🏆 Leaderboard</h1>
+
+<div class="card">
+
+<table>
+
+<thead>
+
+<tr>
+<th>Rank</th>
+<th>Team</th>
+<th>Agent</th>
+<th>Functionality</th>
+<th>Quality</th>
+<th>Robustness</th>
+<th>Final</th>
+</tr>
+
+</thead>
+
+<tbody id="board"></tbody>
+
+</table>
+
+</div>
+
+</main>
+
+<script>
+
+async function load(){
+
+    const data =
+        await fetch(
+            "/api/leaderboard"
+        ).then(r=>r.json());
+
+    const board =
+        document.getElementById(
+            "board"
+        );
+
+    board.innerHTML = "";
+
+    data.forEach(
+        (x,i) => {
+
+            board.innerHTML += `
+            <tr>
+
+            <td>
+            <strong>
+            ${i+1}
+            </strong>
+            </td>
+
+            <td>
+            ${x.team_name}
+            </td>
+
+            <td>
+            ${x.agent_name}
+            </td>
+
+            <td>
+            ${x.functionality}
+            </td>
+
+            <td>
+            ${x.quality}
+            </td>
+
+            <td>
+            ${x.robustness}
+            </td>
+
+            <td>
+            <strong>
+            ${x.final_score}
+            </strong>
+            </td>
+
+            </tr>
+            `;
+        }
+    );
+}
+
+load();
+
+</script>
+
+</body>
+</html>

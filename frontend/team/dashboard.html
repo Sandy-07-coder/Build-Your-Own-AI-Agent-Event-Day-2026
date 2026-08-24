@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Team Dashboard</title>
+<link rel="stylesheet" href="/shared/style.css">
+</head>
+
+<body>
+
+<nav>
+<strong>AI Agent Event</strong>
+
+<div>
+<a href="/team/dashboard.html">
+Dashboard
+</a>
+
+<a href="/team/agent.html">
+Build / Submit
+</a>
+
+<a href="/team/submissions.html">
+Submissions
+</a>
+
+<button onclick="logout()">
+Logout
+</button>
+</div>
+</nav>
+
+<main>
+
+<h1 id="team">Team</h1>
+
+<div class="grid">
+
+<div class="card">
+<h3>Team</h3>
+<p id="members"></p>
+</div>
+
+<div class="card">
+<h3>Latest Score</h3>
+<h1 id="score">--</h1>
+</div>
+
+<div class="card">
+<h3>Status</h3>
+<p id="status">No submission</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Leaderboard</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Rank</th>
+<th>Team</th>
+<th>Agent</th>
+<th>Score</th>
+</tr>
+</thead>
+
+<tbody id="leaderboard"></tbody>
+
+</table>
+
+</div>
+
+</main>
+
+<script>
+
+async function load(){
+
+    const team =
+        await fetch(
+            "/api/team/me"
+        ).then(r=>r.json());
+
+    document.getElementById(
+        "team"
+    ).textContent =
+        team.team_name;
+
+    document.getElementById(
+        "members"
+    ).textContent =
+        JSON.parse(team.members)
+        .join(", ");
+
+    const submissions =
+        await fetch(
+            "/api/submissions/mine"
+        ).then(r=>r.json());
+
+    if(submissions.length){
+
+        const latest =
+            submissions[0];
+
+        document.getElementById(
+            "status"
+        ).textContent =
+            latest.status;
+
+        if(latest.final_score !== null){
+
+            document.getElementById(
+                "score"
+            ).textContent =
+                latest.final_score +
+                " / 100";
+        }
+    }
+
+    const leaderboard =
+        await fetch(
+            "/api/leaderboard"
+        ).then(r=>r.json());
+
+    const tbody =
+        document.getElementById(
+            "leaderboard"
+        );
+
+    tbody.innerHTML = "";
+
+    leaderboard.forEach(
+        (x,i)=>{
+
+            tbody.innerHTML += `
+            <tr>
+            <td>${i+1}</td>
+            <td>${x.team_name}</td>
+            <td>${x.agent_name}</td>
+            <td>${x.final_score}</td>
+            </tr>
+            `;
+        }
+    );
+}
+
+async function logout(){
+
+    await fetch(
+        "/api/auth/logout",
+        {
+            method:"POST"
+        }
+    );
+
+    location.href =
+        "/team/login.html";
+}
+
+load();
+
+</script>
+
+</body>
+</html>

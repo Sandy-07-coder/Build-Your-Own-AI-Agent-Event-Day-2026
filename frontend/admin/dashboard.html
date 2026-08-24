@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="/shared/style.css">
+</head>
+
+<body>
+
+<nav>
+
+<strong>ADMIN — AI AGENT EVENT</strong>
+
+<div>
+
+<a href="/admin/dashboard.html">
+Dashboard
+</a>
+
+<a href="/admin/teams.html">
+Teams
+</a>
+
+<a href="/admin/submissions.html">
+Submissions
+</a>
+
+<a href="/admin/evaluations.html">
+Evaluations
+</a>
+
+<a href="/admin/leaderboard.html">
+Leaderboard
+</a>
+
+<button onclick="logout()">
+Logout
+</button>
+
+</div>
+
+</nav>
+
+<main>
+
+<h1>Admin Dashboard</h1>
+
+<div class="grid">
+
+<div class="card">
+<h2 id="teams">0</h2>
+<p>Teams</p>
+</div>
+
+<div class="card">
+<h2 id="submissions">0</h2>
+<p>Submissions</p>
+</div>
+
+<div class="card">
+<h2 id="evaluations">0</h2>
+<p>Evaluations</p>
+</div>
+
+</div>
+
+</main>
+
+<script>
+
+async function load(){
+
+    const teams =
+        await fetch(
+            "/api/admin/teams"
+        ).then(r=>r.json());
+
+    const submissions =
+        await fetch(
+            "/api/admin/submissions"
+        ).then(r=>r.json());
+
+    const evaluations =
+        await fetch(
+            "/api/admin/evaluations"
+        ).then(r=>r.json());
+
+    document.getElementById(
+        "teams"
+    ).textContent =
+        teams.length;
+
+    document.getElementById(
+        "submissions"
+    ).textContent =
+        submissions.length;
+
+    document.getElementById(
+        "evaluations"
+    ).textContent =
+        evaluations.length;
+}
+
+async function logout(){
+
+    await fetch(
+        "/api/auth/logout",
+        {
+            method:"POST"
+        }
+    );
+
+    location.href =
+        "/admin/login.html";
+}
+
+load();
+
+</script>
+
+</body>
+</html>
