@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Post Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+            body {
+                padding: 1rem;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            outline: none;
+            background: #f8fafc;
+        }
+
+        input[type="text"]:focus, textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            background: #ffffff;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 0.875rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .output-box {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            height: 380px;
+            overflow-y: auto;
+            border: 1px solid #334155;
+            margin-bottom: 1rem;
+        }
+
+        .btn-secondary {
+            width: 100%;
+            padding: 0.875rem;
+            background-color: white;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f1f5f9;
+        }
+
+        .btn-secondary svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .success-msg {
+            color: #16a34a;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>LinkedIn Post Generator</h1>
+            <p>Fill in the details to generate your custom AI prompt.</p>
+        </header>
+
+        <div class="layout">
+            <!-- Form Section -->
+            <div class="card">
+                <h2>Your Experience</h2>
+                
+                <div class="form-group">
+                    <label for="takeaway">Key Takeaway</label>
+                    <input type="text" id="takeaway" placeholder="e.g., I learned how AI agents can perform real-world actions!">
+                </div>
+
+                <div class="form-group">
+                    <label for="agentName">Your Custom Agent Name</label>
+                    <input type="text" id="agentName" placeholder="e.g., The Study Scheduler">
+                </div>
+
+                <div class="form-group">
+                    <label for="problem">What problem does it solve?</label>
+                    <textarea id="problem" placeholder="e.g., reading messy professor emails and automatically adding deadlines to my Google Calendar"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">How was the workshop?</label>
+                    <textarea id="experience" placeholder="e.g., It was an incredible hands-on experience moving from theory to building a working product."></textarea>
+                </div>
+
+                <button class="btn-primary" onclick="generatePrompt()">Generate Prompt</button>
+            </div>
+
+            <!-- Output Section -->
+            <div class="card">
+                <h2>Generated Prompt</h2>
+                <div class="output-box" id="output">Fill out the form and click "Generate Prompt" to see your customized text here.</div>
+                
+                <button class="btn-secondary" onclick="copyToClipboard()" id="copyBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                    Copy Prompt
+                </button>
+                <div class="success-msg" id="successMsg">Copied to clipboard! Ready to paste into ChatGPT.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generatePrompt() {
+            const takeaway = document.getElementById('takeaway').value || "[Briefly describe the most interesting thing you learned today]";
+            const agentName = document.getElementById('agentName').value || "[Name of your agent]";
+            const problem = document.getElementById('problem').value || "[Describe what your agent does]";
+            const experience = document.getElementById('experience').value || "[Describe how the workshop felt]";
+
+            const promptText = `You are an expert personal branding coach and a LinkedIn ghostwriter for tech students and professionals. Your task is to write a highly engaging, professional, and authentic LinkedIn post for me about a workshop I just attended. 
+
+Here are the details you must include in the post:
+
+1. **Event Name:** BUILD YOUR OWN AI AGENT - Hands-on Workshop
+2. **Organizers:** Tech Society – ML Community at Saveetha Engineering College (please mention/tag them)
+3. **Instructors/Mentors:** Markandeyan Gokul and Santhosh K
+4. **Core Topic:** Learning the fundamentals of AI Agents and how to build them without code using Zapier integrations.
+5. **My Key Takeaway:** ${takeaway}
+6. **What I Built:** I successfully built my own custom AI agent called "${agentName}". It solves the problem of ${problem}.
+7. **The Experience:** ${experience}
+
+**Formatting & Style Rules for the output:**
+- Write an engaging "hook" for the first sentence to grab attention (don't start with "I am thrilled to announce").
+- Keep paragraphs short (1-2 sentences max) for easy reading on mobile devices.
+- Use a professional, enthusiastic, and authentic tone. It should sound like a real engineering student wrote it, not a robot.
+- Use bullet points if you list what we learned.
+- Include 3-4 relevant emojis to break up the text.
+- End with an engaging question to encourage comments from my network.
+- Include these hashtags at the very bottom: #AIAgents #Zapier #TechSociety #SaveethaEngineeringCollege #BuildYourOwnAI #NoCode`;
+
+            document.getElementById('output').innerText = promptText;
+        }
+
+        function copyToClipboard() {
+            const output = document.getElementById('output').innerText;
+            if (output.includes("Fill out the form")) return; // Don't copy placeholder
+
+            navigator.clipboard.writeText(output).then(() => {
+                const msg = document.getElementById('successMsg');
+                
+                // Visual feedback
+                msg.style.opacity = '1';
+                setTimeout(() => {
+                    msg.style.opacity = '0';
+                }, 2500);
+            });
+        }
+    </script>
+</body>
+</html>
