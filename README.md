@@ -118,15 +118,18 @@ The complete workshop will be conducted within **4 hours**.
 
 | **Time** | **Duration** | **Activity** |
 |----------|--------------|--------------|
-| **08:00 – 08:15** | 15 mins | Registration, Attendance & Setup |
-| **08:15 – 08:45** | 30 mins | What is an AI Agent? & Exploring Platforms |
-| **08:45 – 09:15** | 30 mins | Introduction to Zapier for AI Agents |
-| **09:15 – 10:00** | 45 mins | 🚀 Live Build #1 (Instructor-Led) |
-| **10:00 – 10:20** | 20 mins | ☕ Break & Networking |
-| **10:20 – 11:00** | 40 mins | 🚀 Live Build #2 (Instructor-Led) |
-| **11:00 – 11:35** | 35 mins | 💻 Hands-on: Participants build their own agents |
-| **11:35 – 11:45** | 10 mins | 📱 Personal Branding & LinkedIn Post |
-| **11:45 – 12:00** | 15 mins | Wrap-up, Q&A, and Dismissal |
+| **08:00 – 08:15** | 15 mins | 📋 Registration, Attendance & Setup |
+| **08:15 – 08:30** | 15 mins | 🧠 Intro to AI Agents *(By Vishal)* |
+| **08:30 – 08:45** | 15 mins | 🌐 Various AI Platforms: Pros & Cons *(By Laxmi Priya)* |
+| **08:45 – 09:00** | 15 mins | ⚡ Why Zapier? Features & Benefits *(By Pavithra)* |
+| **09:00 – 09:30** | 30 mins | 🚀 Live Build #1: The Smart Email Summarizer *(By Surya)* |
+| **09:30 – 09:45** | 15 mins | ☕ Break & Networking |
+| **09:45 – 10:30** | 45 mins | 🚀 Live Build #2: The Profile Builder *(By Surya)* |
+| **10:30 – 10:45** | 15 mins | 💡 Identifying Problems in Daily Life for AI Agents *(By Laxmi Priya)* |
+| **10:45 – 11:15** | 30 mins | 💻 Hands-on: Participants Ideate and Build their AI Agents |
+| **11:15 – 11:30** | 15 mins | 📱 Learning in Public & LinkedIn Post *(By Vishal)* |
+| **11:30 – 11:45** | 15 mins | 📊 Mentimeter Feedback & Engagement *(By Vishal)* |
+| **11:45 – 12:00** | 15 mins | 🎤 Wrap-up, Q&A, and Dismissal |
 
 ---
 
@@ -165,15 +168,16 @@ You will connect these AI models via Zapier to provide the "brain" of your agent
 
 # 👨‍💻 Organizers & Speakers
 
-## Markandeyan Gokul
+**Organizers:**
+- **Markandeyan Gokul** (Joint Secretary – ML, Saveetha Engineering College)
+- **Santhosh K** (Joint Secretary – ML, Saveetha Engineering College)
 
-**Joint Secretary – ML**  
-**Saveetha Engineering College**
-
-## Santhosh K
-
-**Joint Secretary – ML**  
-**Saveetha Engineering College**
+**Workshop Speakers:**
+- **Vishal** (Intro to AI Agents, Mentimeter)
+- **Lohini** (AI Platforms, Learning in Public / LinkedIn)
+- **Pavithra** (Zapier Fundamentals)
+- **Surya** (Live Agent Building Sessions)
+- **Laxmi Priya** (Identifying Real-World Problems)
 
 ---
 
