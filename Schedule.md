@@ -6,7 +6,7 @@ This document contains the final workshop timeline, with direct links to the Goo
 |----------|--------------|----------------------------------|
 | **08:00 – 08:15** | 15 mins | 📋 Registration, Attendance & Setup |
 | **08:15 – 08:30** | 15 mins | 🧠 [Intro to AI Agents *(By Vishal)*](https://docs.google.com/presentation/d/1bSXFoDwLDTv5ZvP2lIm71V-lNBmOEYhVnrHYo0Ackkk/edit?usp=sharing) |
-| **08:30 – 08:45** | 15 mins | 🌐 [Various AI Platforms: Pros & Cons *(By Laxmi Priya)*](https://docs.google.com/presentation/d/1bSXFoDwLDTv5ZvP2lIm71V-lNBmOEYhVnrHYo0Ackkk/edit?usp=sharing) |
+| **08:30 – 08:45** | 15 mins | 🌐 [Various AI Platforms: Pros & Cons *(By Laxmi Priya)*](https://docs.google.com/presentation/d/1r0iyBUeiyWioY7cgpKId0xfZAUGoATgTbTKVGmsZNE0/edit?usp=sharing) |
 | **08:45 – 09:00** | 15 mins | ⚡ [Why Zapier? Features & Benefits *(By Pavithra)*](https://docs.google.com/presentation/d/17bgVb4YEXoqIYRQMPg3jsiEp-tdAHKiYGVLEDiwwfS0/edit?usp=sharing) |
 | **09:00 – 09:25** | 25 mins | 🚀 Live Build #1: The Smart Email Summarizer *(By Surya)* |
 | **09:25 – 09:35** | 10 mins | 📊 Mentimeter Quiz & Feedback #1 *(By Vishal)* |
