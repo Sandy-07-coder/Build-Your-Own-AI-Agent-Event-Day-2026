@@ -125,7 +125,7 @@ The complete workshop will be conducted within **4 hours**.
 | **09:00 – 09:25** | 25 mins | 🚀 Live Build #1: The Smart Email Summarizer *(By Surya)* |
 | **09:25 – 09:35** | 10 mins | 📊 Mentimeter Quiz & Feedback #1 *(By Vishal)* |
 | **09:35 – 09:50** | 15 mins | ☕ Break & Networking |
-| **09:50 – 10:30** | 40 mins | 🚀 Live Build #2: The Profile Builder *(By Surya)* |
+| **09:50 – 10:30** | 40 mins | 🚀 Live Build #2: The Form automation agent *(By Surya)* |
 | **10:30 – 10:40** | 10 mins | 📊 Mentimeter Quiz & Feedback #2 *(By Vishal)* |
 | **10:40 – 10:55** | 15 mins | 💡 Identifying Problems in Daily Life for AI Agents *(By Lohini)* |
 | **10:55 – 11:25** | 30 mins | 💻 Hands-on: Participants Ideate and Build their AI Agents |
