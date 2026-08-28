@@ -122,13 +122,15 @@ The complete workshop will be conducted within **4 hours**.
 | **08:15 – 08:30** | 15 mins | 🧠 Intro to AI Agents *(By Vishal)* |
 | **08:30 – 08:45** | 15 mins | 🌐 Various AI Platforms: Pros & Cons *(By Laxmi Priya)* |
 | **08:45 – 09:00** | 15 mins | ⚡ Why Zapier? Features & Benefits *(By Pavithra)* |
-| **09:00 – 09:30** | 30 mins | 🚀 Live Build #1: The Smart Email Summarizer *(By Surya)* |
-| **09:30 – 09:45** | 15 mins | ☕ Break & Networking |
-| **09:45 – 10:30** | 45 mins | 🚀 Live Build #2: The Profile Builder *(By Surya)* |
-| **10:30 – 10:45** | 15 mins | 💡 Identifying Problems in Daily Life for AI Agents *(By Laxmi Priya)* |
-| **10:45 – 11:15** | 30 mins | 💻 Hands-on: Participants Ideate and Build their AI Agents |
-| **11:15 – 11:30** | 15 mins | 📱 Learning in Public & LinkedIn Post *(By Vishal)* |
-| **11:30 – 11:45** | 15 mins | 📊 Mentimeter Feedback & Engagement *(By Vishal)* |
+| **09:00 – 09:25** | 25 mins | 🚀 Live Build #1: The Smart Email Summarizer *(By Surya)* |
+| **09:25 – 09:35** | 10 mins | 📊 Mentimeter Quiz & Feedback #1 *(By Vishal)* |
+| **09:35 – 09:50** | 15 mins | ☕ Break & Networking |
+| **09:50 – 10:30** | 40 mins | 🚀 Live Build #2: The Profile Builder *(By Surya)* |
+| **10:30 – 10:40** | 10 mins | 📊 Mentimeter Quiz & Feedback #2 *(By Vishal)* |
+| **10:40 – 10:55** | 15 mins | 💡 Identifying Problems in Daily Life for AI Agents *(By Lohini)* |
+| **10:55 – 11:25** | 30 mins | 💻 Hands-on: Participants Ideate and Build their AI Agents |
+| **11:25 – 11:35** | 10 mins | 📱 Learning in Public & LinkedIn Post *(By Pavithra)* |
+| **11:35 – 11:45** | 10 mins | 📊 Final Mentimeter & Event Recap *(By Vishal)* |
 | **11:45 – 12:00** | 15 mins | 🎤 Wrap-up, Q&A, and Dismissal |
 
 ---
